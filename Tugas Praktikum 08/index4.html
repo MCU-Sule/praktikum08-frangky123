@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Frangky Hernandez 2172036">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+            width: 20px;
+            height: 10px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+        tr, td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+  <script>
+      document.write("<table>");
+        let baris = prompt("Jumlah baris:");
+        let kolom = prompt("Jumlah kolom:");
+        let warna1 = prompt("Warna 1 (Hexadecimal):");
+        let warna2 = prompt("Warna 2 (Hexadecimal):");
+        let hasil = 0;
+
+        for(i=1; i<=baris; i++){
+            document.write("<tr>");
+        for(j=1; j<=kolom; j++){
+            if((i+j)%2!=0){
+            document.write("<td bgcolor= '#" + warna1 + "'>" + j*i + "</td>");
+        }
+        else{
+            document.write("<td bgcolor= '#" + warna2 + "'>" + j*i + "</td>");
+        }
+        }
+        document.write("</tr>");
+    }
+        document.write("</table>");
+
+
+        </script>
+</body>
+</html>
